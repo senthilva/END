@@ -27,11 +27,11 @@
      
   
 - Reverse the text (only for training data).  
-  - use torch.flip in the training function.  
-  
-      
-      for data_item  in range(len(train_data)):
-        vars(train_data.examples[data_item]).get('text').reverse()
+
+        for data_item  in range(len(train_data)):
+          vars(train_data.examples[data_item]).get('text').reverse()
+
+    
   
      
    
