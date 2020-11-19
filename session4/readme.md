@@ -29,6 +29,9 @@
 - Reverse the text (only for training data).  
   - use torch.flip in the training function.  
   
-        text, text_lengths = batch.text
-
-        text = torch.flip(text, [0]) # reversing the text
+      
+      for data_item  in range(len(train_data)):
+        vars(train_data.examples[data_item]).get('text').reverse()
+  
+     
+   
