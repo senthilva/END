@@ -124,42 +124,6 @@ cel = float(inp)
 fahr = (cel * 9.0) / 5.0 + 32.0
 print(fahr)
 
-
-
-Skip to content
-Using Gmail with screen readers
-Meet
-Hangouts
-
-4 of 3,280
-Assignment 17B
-Inbox
-
-Nihar Kanungo
-Attachments
-Dec 20, 2020, 10:33 AM (3 days ago)
-to me
-
-Arch,
-
-   PFA
-
-Regards,
-Nihar
-Attachments area
-
-senthil vinayagam
-Dec 20, 2020, 11:00 AM (3 days ago)
-Thanks a ton mate ! I owe you On Sun, 20 Dec 2020, 10:33 Nihar Kanungo, <nihar.kanungo@gmail.com> wrote: Arch, PFA Regards, Nihar
-
-Nihar Kanungo
-Dec 20, 2020, 11:14 AM (3 days ago)
-to me
-
-You are welcome  Arch
-
-Thanks a lot.Thank you!Thanks a lot!
-
 # Add two strings
 def add_str(str1,str2):
    return str1 + str2
