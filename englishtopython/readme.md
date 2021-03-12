@@ -34,6 +34,7 @@ The objective is to try and generate python code from english.The machine transl
 * The model is able to learn the python syntax pretty well : tabs; colon ; keywords
 * The amount of training data is less ~4k ; so the model struggles to learn context across words
 * Model is overfitting : it is able to translate a single word to entire python code Eg presence of "sigmoid" maps to entire python code
+* Needs to understand and generate variables names
 
 ## References
 
