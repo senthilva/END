@@ -21,6 +21,33 @@ The objective is to try and generate python code from english.The machine transl
 
 ## Loss
 
+Built a custom loss function using weights within the crossentropy loss function. The idea was to give a higher weightage for top 50 most common vocab which ten to cover the most used operators. In addition, gave highest weightage for keywords and tabs in vocabulary to force it to learn the syntax.
+
+```python
+weight_list = []
+for idx,word in enumerate(TRG.vocab.itos):
+
+
+  #default
+  weight = 1.0 
+  
+  # first 50 except
+  #0-3  pad, sos, eos, unk
+  if 3 < idx <= 50 :
+    weight = 2.0 
+
+  # keyword or tab 
+  if (keyword.iskeyword(word)) or ('\n' in word) :
+    weight = 3.0
+  
+  weight_list.append(weight)
+
+class_weights = torch.FloatTensor(weight_list).to(device)
+
+criterion = nn.CrossEntropyLoss(weight=class_weights, ignore_index = TRG_PAD_IDX)
+```
+
+
 ## Model Training
 
 * Training loss; perplexity kept improving so increased the epochs to 30
